@@ -10,7 +10,7 @@ class PlantsController < ApplicationController
     # GET /plants/:id
     def show
       plant = Plant.find_by(id: params[:id])
-      if bird
+      if plant
         render json: plant
       else
         render json: { error: "Plant not found" }, status: :not_found
